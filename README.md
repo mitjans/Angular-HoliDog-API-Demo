@@ -1,6 +1,6 @@
 # HoliDog Web Application
 
-This is a web application created using Angular and Typescript for the HoliDog coding challenge, using its API.
+This is a web application created with Angular and Typescript for the HoliDog coding challenge, using its API.
 
 # Some screenshots
 
