@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -15,18 +16,17 @@ export class HoliDogAPI {
 
     // 1. List all breeds
     public listAllBreeds() {
-        console.log(this.http)
         return this.http.get(this.listBreedsUrl);
-        // console.log(json);
     }
 
     // 2. Random image (by breed, by sub-breed)
     public randomImage(breed?: string) {
-
-    }
-
-    // MARK: Helper functions
-    private getData(url: string) {
-        return this.http.get(url)
+        let url: string;
+        if (breed) {
+            url = "https://dog.ceo/api/breed/" + breed.split(' ').reverse().join('/') + "/images/random";
+        } else {
+            url = this.randomImageUrl;
+        }
+        return this.http.get(url);
     }
 }

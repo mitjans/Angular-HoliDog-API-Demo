@@ -25,7 +25,6 @@ export class BreedFetchComponent implements OnInit {
           });
         }
       }
-      console.log(this.breedList);
     })
   }
 
