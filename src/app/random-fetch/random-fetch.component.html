@@ -2,9 +2,9 @@
 <hr>
 
 <div align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="Random image" style="max-width:400px;max-height:400px">
+    <img [src]="imagePath" alt="Random image" style="max-width:400px;max-height:400px">
 </div>
 <br>
 <div align="center">
-    <button class="btn btn-success">Fetch dog!</button>
+    <button class="btn btn-success" (click)="onClick()">Fetch dog!</button>
 </div>

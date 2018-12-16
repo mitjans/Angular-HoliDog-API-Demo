@@ -3,7 +3,7 @@
 <hr>
 
 <div align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="Random image" style="max-width:400px;max-height:400px">
+    <img [src]="imagePath" alt="Random image" style="max-width:400px;max-height:400px">
 </div>
 <br>
 
@@ -11,11 +11,11 @@
     <div class="row">
         <div class="col-md-2 col-md-offset-4">
             <select class="form-control">
-                    <option>1</option>
+                    <option *ngFor="let subbreed of breedList">{{ subbreed | titlecase }}</option>
             </select>    
         </div>
         <div class="col-md-2">
-            <button class="btn btn-success">Fetch dog!</button>
+            <button class="btn btn-success" (click)="onClick()">Fetch dog!</button>
         </div>
     </div>
 </div>
